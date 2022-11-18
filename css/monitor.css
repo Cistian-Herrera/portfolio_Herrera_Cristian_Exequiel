@@ -1,0 +1,49 @@
+@media (min-width: 1000px) {
+
+    .head {
+        height: 100%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .head_nombre {
+        font-size: 8rem;
+    }
+
+    .head_foto {
+        width: 18vw;
+    
+        position: relative;
+        top: 5px;
+        left: 20px;
+    }
+
+    /*     SECCION NUMERO 2            */
+
+    .seccion2 {
+        padding: 50px 0px 100px;
+    
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #seccion2_card1 {
+        margin-top: 0px;
+    }
+
+    .seccion2_card {
+        /* border: 2px dashed blue; */
+        height: 300px;
+        width: 250px;
+        margin: 0px 20px;
+    }
+
+
+
+
+
+    
+
+}

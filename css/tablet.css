@@ -1,0 +1,19 @@
+@media (min-width: 500px) {
+
+    .head {
+        height: 70%;
+        width: 80vw;
+    }
+
+    .head_nombre {
+        font-size: 10rem;
+    }
+
+    .head_foto {
+        width: 30vw;
+    
+        position: absolute;
+        top: 300px;
+    }
+
+}
