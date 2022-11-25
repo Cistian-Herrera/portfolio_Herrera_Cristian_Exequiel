@@ -126,7 +126,8 @@ header {
 /*------------iframe------------*/
 /*------------------------------*/
 
-.video_div{border: 2px red dashed;
+.video_div{
+/*-----border: 2px red dashed;------*/
 height: 300px;
 background-color: rgb(55,97,117);
 /*-----------------------------*/
