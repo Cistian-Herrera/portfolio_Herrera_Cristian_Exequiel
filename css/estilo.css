@@ -5,9 +5,9 @@
     padding: 0;
 }
 
-html {
+/*html {
     font-size: 62.5%;
-}
+}*/
 
 /* ------ENCABEZADO-------------- */
 
@@ -37,7 +37,7 @@ header {
 .head_nombre {
     color: white;
     font-family: 'Ubuntu', sans-serif;
-    font-size: 6rem;
+    font-size: 2,5rem;
 }
 
 .head_foto {
@@ -45,7 +45,7 @@ header {
     width: 50vw;
 
     position: relative;
-    top: 90px;
+    top: 60px;
 }
 
 /* -------------------------- */
@@ -121,3 +121,34 @@ header {
     background-image: url(../img/tarjeta3.jpg);
     background-size: cover;
 }
+
+/*------------------------------*/
+/*------------iframe------------*/
+/*------------------------------*/
+
+.video_div{border: 2px red dashed;
+height: 300px;
+background-color: rgb(55,97,117);
+/*-----------------------------*/
+/*------------display----------*/
+/*-----------------------------*/
+
+
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;}
+
+#video1{width:350px;
+height: 195px;
+border: 5px white solid;
+border-radius: 30px;
+
+
+box-shadow: 4px 6px 12px -1px rgba(0,0,0,0.63);
+-webkit-box-shadow: 4px 6px 12px -1px rgba(0,0,0,0.63);
+-moz-box-shadow: 4px 6px 12px -1px rgba(0,0,0,0.63);
+}
+
+

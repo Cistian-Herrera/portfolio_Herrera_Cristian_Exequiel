@@ -8,7 +8,7 @@
     }
 
     .head_nombre {
-        font-size: 8rem;
+        font-size: rem;
     }
 
     .head_foto {
@@ -44,6 +44,8 @@
 
 
 
-    
+    .video_div{height: 500px;}
 
+    #video1{width: 670px;
+    height: 380px;}
 }
