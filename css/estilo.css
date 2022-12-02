@@ -152,4 +152,76 @@ box-shadow: 4px 6px 12px -1px rgba(0,0,0,0.63);
 -moz-box-shadow: 4px 6px 12px -1px rgba(0,0,0,0.63);
 }
 
+.paralax{
+    border: 2px solid purple ;
+    height: 600px;
+    background-image:url(../img/paisaje.jpg) ;
+    background-size: cover;
+background-attachment: fixed;
 
+
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+.hola{color: beige;
+margin-right:50px;
+font-size: 20px;
+font-family: 'Ubuntu', sans-serif;}
+
+
+.color{color: beige;
+    margin-right:50px;
+    font-size: 12px;
+    font-family: 'Ubuntu', sans-serif;
+text-shadow: 2px 2px 2px black;}
+
+
+
+
+#paralax_link
+    {color: beige;
+        /*border: 1px dashed red;*/
+        margin-right:50px;
+        margin-top: 20px;
+        font-size: 20px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-family: 'ubuntu',sans-serif;
+width: 70px;
+height: 20px;
+background-color: cadetblue;
+box-shadow: 2px 2px 2px black;
+
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;}
+
+
+
+#paralax_link:hover {
+    background-color: darkred;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{border: 2px dashed orange;
+height: 500px;
+background-color: rgb(14, 116, 82);}
