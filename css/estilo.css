@@ -215,10 +215,27 @@ align-items: center;}
 
 
 
+#sig{
+    background-color: blue;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin-right: 90%;
+    border-radius: 4px;
+    text-decoration: none;
+    color: beige;
+}
 
 
+#sig:hover {
+    color: red;
+    background-color: green;
+    transition: all 10s ease-in-out;
+-webkit-transition: all 10s ease-in-out;
+-moz-transition: all 10s ease-in-out;
+-ms-transition: all 10s ease-in-out;
+-o-transition: all 10s ease-in-out;
 
-
+}
 
 
 
