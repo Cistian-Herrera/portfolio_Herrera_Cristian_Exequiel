@@ -53,73 +53,214 @@ header {
 /* -------------------------- */
 
 .seccion2 {
-    /* border: 2px dashed red; */
-    height: auto;
-    padding: 10px 0px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 40px 0;
+    
 }
 
-.seccion2_card {
-    /* border: 2px dashed blue; */
-    height: 300px;
-    width: 70vw;
-    margin: 20px 0px;
-    background-color: rgba(95, 158, 160, 0.562);
-    border-radius: 8px;
-
-    box-shadow: 4px 6px 12px -1px rgba(0,0,0,0.63);
-    -webkit-box-shadow: 4px 6px 12px -1px rgba(0,0,0,0.63);
-    -moz-box-shadow: 4px 6px 12px -1px rgba(0,0,0,0.63);
+.seccion2 .box
+{
+  position: relative;
+  width: 320px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 30px;
+  transition: 0.5s;
 }
 
-#seccion2_card1 {
-    margin-top: 80px;
+.seccion2 .box::before
+{
+  content:' ';
+  position: absolute;
+  top: 0;
+  left: 50px;
+  width: 50%;
+  height: 100%;
+  text-decoration: none;
+  background: #fff;
+  border-radius: 8px;
+  transform: skewX(15deg);
+  transition: 0.5s;
 }
 
-.seccion2_card1_img {
-    /* border: 1px dashed orangered; */
-    height: 55%;
-    border-radius: 8px 8px 0px 0px;
-
-    background-image: url(../img/tarjeta.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+.seccion2 .box::after
+{
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 50;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  border-radius: 8px;
+  transform: skewX(15deg);
+  transition: 0.5s;
+  filter: blur(30px);
 }
 
-#card_img {
-    width: 100%;
+.seccion2 .box:hover:before,
+.seccion2 .box:hover:after
+{
+  transform: skewX(0deg);
+  left: 20px;
+  width: calc(100% - 90px);
+  
 }
 
-.seccion2_card1_texto {
-    /* border: 1px dashed rgb(0, 0, 0); */
-    height: 45%;
-    border-radius: 0px 0px 8px 8px;
-    padding: 20px;
+.seccion2 .box:nth-child(1):before,
+.seccion2 .box:nth-child(1):after
+{
+  background: linear-gradient(315deg, #ffbc00, #ff0058)
 }
 
-.seccion2_card1_texto_h2 {
-    font-size: 25px;
-    font-family: 'Ubuntu', sans-serif;
-    margin-bottom: 15px;
+.seccion2 .box:nth-child(2):before,
+.seccion2 .box:nth-child(2):after
+{
+  background: linear-gradient(315deg, #03a9f4, #ff0058)
 }
 
-.seccion2_card1_texto_p {
-    font-size: 13px;
-    font-family: 'Ubuntu', sans-serif;
+.seccion2 .box:nth-child(3):before,
+.seccion2 .box:nth-child(3):after
+{
+  background: linear-gradient(315deg, #4dff03, #00d0ff)
 }
 
-#seccion2_card2_img {
-    background-image: url(../img/tarjeta2.jpg);
-    background-size: cover;
+.seccion2 .box span
+{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  pointer-events: none;
 }
 
-#seccion2_card3_img {
-    background-image: url(../img/tarjeta3.jpg);
-    background-size: cover;
+.seccion2 .box span::before
+{
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: 0.1s;  
+  animation: animate 2s ease-in-out infinite;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08)
+}
+
+.seccion2 .box:hover span::before
+{
+  top: -50px;
+  left: 50px;
+  width: 100px;
+  height: 100px;
+  opacity: 1;
+}
+
+.seccion2 .box span::after
+{
+  content:'';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: 0.5s;
+  animation: animate 2s ease-in-out infinite;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  animation-delay: -1s;
+}
+
+.seccion2 .box:hover span:after
+{
+  bottom: -50px;
+  right: 50px;
+  width: 100px;
+  height: 100px;
+  opacity: 1;
+}
+
+@keyframes animate
+{
+  0%, 100%
+  {
+    transform: translateY(10px);
+  }
+  
+  50%
+  {
+    transform: translate(-10px);
+  }
+}
+
+.seccion2 .box .content
+{
+  position: relative;
+  left: 0;
+  padding: 20px 40px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 1;
+  transform: 0.5s;
+  color: rgb(0, 233, 214);
+}
+
+.seccion2 .box:hover .content
+{
+  left: -25px;
+  padding: 60px 40px;
+}
+
+.seccion2 .box .content h2
+{
+  font-size: 2em;
+  color: rgb(34, 131, 211);
+  margin-bottom: 10px;
+}
+
+.seccion2 .box .content p
+{
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  line-height: 1.4em;
+}
+
+.seccion2 .box .content a
+{
+  display: inline-block;
+  font-size: 1.1em;
+  color: rgb(100, 194, 201);
+  background: rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.seccion2 .box .content a:hover
+{
+  background: #ffcf4d;
+  border: 1px solid rgba(255, 0, 88, 0.4);
+  box-shadow: 0 1px 15px rgba(1, 1, 1, 0.2);
 }
 
 /*------------------------------*/
@@ -215,30 +356,6 @@ align-items: center;}
 
 
 
-#sig{
-    background-color: blue;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
-    margin-right: 90%;
-    border-radius: 4px;
-    text-decoration: none;
-    color: beige;
-}
-
-
-#sig:hover {
-    color: red;
-    background-color: green;
-    transition: all 10s ease-in-out;
--webkit-transition: all 10s ease-in-out;
--moz-transition: all 10s ease-in-out;
--ms-transition: all 10s ease-in-out;
--o-transition: all 10s ease-in-out;
-
-}
-
-
-
-footer{border: 2px dashed orange;
+footer{/*border: 2px dashed orange;*/
 height: 500px;
 background-color: rgb(14, 116, 82);}
